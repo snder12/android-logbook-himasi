@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Anggota.CreateAnggotaActivity">
+
+    <TextView
+        android:id="@+id/tvNoAnggota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Anggota : "
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvNpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NPM : "
+        android:layout_below="@id/tvNoAnggota"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama : "
+        android:layout_below="@id/tvNpm"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvNoHp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nomor HP : "
+        android:layout_below="@id/tvNama"
+        android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/edtNoAnggota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nomor Anggota"
+        android:layout_toRightOf="@+id/tvNoAnggota"
+        android:layout_alignBaseline="@+id/tvNoAnggota"/>
+    <EditText
+        android:id="@+id/edtNpm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="NPM"
+        android:layout_toRightOf="@+id/tvNpm"
+        android:layout_alignBaseline="@+id/tvNpm"/>
+    <EditText
+        android:id="@+id/edtNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nama"
+        android:layout_toRightOf="@+id/tvNama"
+        android:layout_alignBaseline="@+id/tvNama"/>
+    <EditText
+        android:id="@+id/edtNoHp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nomor HP"
+        android:layout_toRightOf="@+id/tvNoHp"
+        android:layout_alignBaseline="@+id/tvNoHp"/>
+    <LinearLayout
+        android:id="@+id/Linearlayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tvNoHp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <Button
+            android:id="@+id/btInserting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Anggota"/>
+        <Button
+            android:id="@+id/btBackGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"/>
+    </LinearLayout>
+
+</RelativeLayout>
