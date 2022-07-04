@@ -12,8 +12,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import com.example.lbh.Anggota.Model.ManageAnggotaModel;
-import com.example.lbh.Anggota.Rest.ApiClient;
-import com.example.lbh.Anggota.Rest.ApiInterface;
+import com.example.lbh.Rest.ApiClient;
+import com.example.lbh.Rest.ApiInterface;
 import com.example.lbh.R;
 
 public class UpdateAnggotaActivity extends AppCompatActivity {

@@ -12,8 +12,8 @@ import android.widget.Button;
 import com.example.lbh.Anggota.Adapter.AnggotaAdapter;
 import com.example.lbh.Anggota.Model.AnggotaModel;
 import com.example.lbh.Anggota.Model.GetAnggotaModel;
-import com.example.lbh.Anggota.Rest.ApiClient;
-import com.example.lbh.Anggota.Rest.ApiInterface;
+import com.example.lbh.Rest.ApiClient;
+import com.example.lbh.Rest.ApiInterface;
 
 import java.util.List;
 
