@@ -12,13 +12,22 @@ public class AnggotaModel {
     private String nama;
     @SerializedName("no_hp")
     private String no_hp;
+    @SerializedName("email")
+    private String email;
+    @SerializedName("angkatan")
+    private String angkatan;
+    @SerializedName("jabatan")
+    private String jabatan;
     public AnggotaModel(){}
-    public AnggotaModel(String no_anggota, String npm, String nama, String no_hp)
+    public AnggotaModel(String no_anggota, String npm, String nama, String no_hp, String email, String angkatan, String jabatan)
     {
         this.no_anggota = no_anggota;
         this.npm = npm;
         this.nama = nama;
         this.no_hp = no_hp;
+        this.email = email;
+        this.angkatan = angkatan;
+        this.jabatan = jabatan;
     }
     public String getNo_anggota() {
         return no_anggota;
@@ -44,4 +53,23 @@ public class AnggotaModel {
     public void setNo_hp(String no_hp) {
         this.no_hp= no_hp;
     }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email= email;
+    }
+    public String getAngkatan() {
+        return angkatan;
+    }
+    public void setAngkatan(String angkatan) {
+        this.angkatan= angkatan;
+    }
+    public String getJabatan() {
+        return jabatan;
+    }
+    public void setJabatan(String jabatan) {
+        this.jabatan= jabatan;
+    }
+
 }

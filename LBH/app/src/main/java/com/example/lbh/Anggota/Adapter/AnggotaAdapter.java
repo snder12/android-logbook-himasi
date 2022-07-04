@@ -14,6 +14,8 @@ import com.example.lbh.Anggota.Model.AnggotaModel;
 import com.example.lbh.Anggota.UpdateAnggotaActivity;
 import com.example.lbh.R;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 public class AnggotaAdapter extends RecyclerView.Adapter<AnggotaAdapter.MyViewHolder> {
@@ -38,6 +40,13 @@ public class AnggotaAdapter extends RecyclerView.Adapter<AnggotaAdapter.MyViewHo
                 mAnggotaList.get(position).getNama());
         holder.mTextViewNoHp.setText("Nomor HP = " +
                 mAnggotaList.get(position).getNo_hp());
+        holder.mTextViewEmail.setText("Email = " +
+                mAnggotaList.get(position).getEmail());
+        holder.mTextViewAngkatan.setText("Angkatan = " +
+                mAnggotaList.get(position).getAngkatan());
+        holder.mTextViewJabatan.setText("Jabatan = " +
+                mAnggotaList.get(position).getJabatan());
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,11 +54,18 @@ public class AnggotaAdapter extends RecyclerView.Adapter<AnggotaAdapter.MyViewHo
                         UpdateAnggotaActivity.class);
                 mIntent.putExtra("No_Anggota",
                         mAnggotaList.get(position).getNo_anggota());
-                mIntent.putExtra("Npm", mAnggotaList.get(position).getNpm());
+                mIntent.putExtra("Npm",
+                        mAnggotaList.get(position).getNpm());
                 mIntent.putExtra("Nama",
                         mAnggotaList.get(position).getNama());
                 mIntent.putExtra("No_hp",
                         mAnggotaList.get(position).getNo_hp());
+                mIntent.putExtra("Email",
+                        mAnggotaList.get(position).getEmail());
+                mIntent.putExtra("Angkatan",
+                        mAnggotaList.get(position).getAngkatan());
+                mIntent.putExtra("Jabatan",
+                        mAnggotaList.get(position).getJabatan());
                 view.getContext().startActivity(mIntent);
             }
         });
@@ -60,13 +76,16 @@ public class AnggotaAdapter extends RecyclerView.Adapter<AnggotaAdapter.MyViewHo
         return mAnggotaList.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView mTextViewNoAnggota, mTextViewNpm, mTextViewNama, mTextViewNoHp;
+        public TextView mTextViewNoAnggota, mTextViewNpm, mTextViewNama, mTextViewNoHp, mTextViewEmail, mTextViewAngkatan, mTextViewJabatan;
         public MyViewHolder(View itemView) {
             super(itemView);
             mTextViewNoAnggota = (TextView) itemView.findViewById(R.id.tvNoAnggota);
             mTextViewNpm = (TextView) itemView.findViewById(R.id.tvNpm);
             mTextViewNama = (TextView) itemView.findViewById(R.id.tvNama);
             mTextViewNoHp = (TextView) itemView.findViewById(R.id.tvNoHp);
+            mTextViewEmail = (TextView) itemView.findViewById(R.id.tvEmail);
+            mTextViewAngkatan = (TextView) itemView.findViewById(R.id.tvAngkatan);
+            mTextViewJabatan = (TextView) itemView.findViewById(R.id.tvJabatan);
         }
     }
 

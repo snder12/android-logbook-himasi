@@ -43,36 +43,10 @@
         android:inputType="textPassword"
         android:drawablePadding="24dp"/>
 
-    <EditText
-        android:id="@+id/etRegisterNohp"
-        android:layout_below="@+id/etRegisterPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:hint="No HP"
-        android:drawablePadding="24dp"/>
-
-    <EditText
-        android:id="@+id/etRegisterJeniskelamin"
-        android:layout_below="@+id/etRegisterNohp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:hint="Jenis Kelamin"
-        android:drawablePadding="24dp"/>
-
-    <EditText
-        android:id="@+id/etRegisterAngkatan"
-        android:layout_below="@+id/etRegisterJeniskelamin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:hint="Angkatan"
-        android:drawablePadding="24dp"/>
 
     <Button
         android:id="@+id/btnRegister"
-        android:layout_below="@id/etRegisterAngkatan"
+        android:layout_below="@id/etRegisterPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="REGISTER"/>

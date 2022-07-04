@@ -4,6 +4,8 @@ import com.example.lbh.Anggota.Model.GetAnggotaModel;
 import com.example.lbh.Anggota.Model.ManageAnggotaModel;
 import com.example.lbh.Login.Model.Login;
 import com.example.lbh.Register.Model.Register;
+import com.example.lbh.Proker.Model.GetProkerModel;
+import com.example.lbh.Proker.Model.ManageProkerModel;
 
 import kotlin.jvm.JvmMultifileClass;
 import retrofit2.Call;
@@ -21,13 +23,19 @@ public interface ApiInterface {
     Call<ManageAnggotaModel> postAnggota(@Field("no_anggota") String no_anggota,
                                          @Field("npm") String npm,
                                          @Field("nama") String nama,
-                                         @Field("no_hp") String no_hp);
+                                         @Field("no_hp") String no_hp,
+                                         @Field("email") String email,
+                                         @Field("angkatan") String angkatan,
+                                         @Field("jabatan") String jabatan);
     @FormUrlEncoded
     @PUT("Anggota")
     Call<ManageAnggotaModel> putAnggota(@Field("no_anggota") String no_anggota,
                                         @Field("npm") String npm,
                                         @Field("nama") String nama,
-                                        @Field("no_hp") String no_hp);
+                                        @Field("no_hp") String no_hp,
+                                        @Field("email") String email,
+                                        @Field("angkatan") String angkatan,
+                                        @Field("jabatan") String jabatan);
     @FormUrlEncoded
     @HTTP(method = "DELETE", path = "Anggota", hasBody = true)
     Call<ManageAnggotaModel> deleteAnggota(@Field("no_anggota") String no_anggota);
@@ -44,10 +52,25 @@ public interface ApiInterface {
     Call<Register> registerResponse(
             @Field("username") String username,
             @Field("email") String email,
-            @Field("password") String password,
-            @Field("no_hp") String no_hp,
-            @Field("jenis_kelamin") String jenis_kelamin,
-            @Field("angkatan") String angkatan
+            @Field("password") String password
     );
+
+    @GET("proker")
+    Call<GetProkerModel> getProker();
+    @FormUrlEncoded
+    @POST("proker")
+    Call<ManageProkerModel> postProker(@Field("id_proker") String id_proker,
+                                         @Field("nama_proker") String nama_proker,
+                                         @Field("tanggal") String tanggal,
+                                         @Field("deskripsi") String deskripsi);
+    @FormUrlEncoded
+    @PUT("proker")
+    Call<ManageProkerModel> putProker(@Field("id_proker") String id_proker,
+                                      @Field("nama_proker") String nama_proker,
+                                      @Field("tanggal") String tanggal,
+                                      @Field("deskripsi") String deskripsi);
+    @FormUrlEncoded
+    @HTTP(method = "DELETE", path = "Proker", hasBody = true)
+    Call<ManageProkerModel> deleteProker(@Field("id_proker") String id_proker);
 }
 

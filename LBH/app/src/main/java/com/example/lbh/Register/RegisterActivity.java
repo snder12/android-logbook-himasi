@@ -23,10 +23,10 @@ import retrofit2.Response;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
 
-    EditText etUsername, etEmail, etPassword, etNohp, etJeniskelamin, etAngkatan;
+    EditText etUsername, etEmail, etPassword;
     Button btnRegister;
     TextView tvLogin;
-    String username, email, password, nohp, jeniskelamin, angkatan;
+    String username, email, password;
     ApiInterface apiInterface;
 
     @Override
@@ -37,9 +37,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         etUsername = findViewById(R.id.etRegisterUsername);
         etEmail = findViewById(R.id.etRegisterEmail);
         etPassword = findViewById(R.id.etRegisterPassword);
-        etNohp = findViewById(R.id.etRegisterNohp);
-        etJeniskelamin = findViewById(R.id.etRegisterJeniskelamin);
-        etAngkatan = findViewById(R.id.etRegisterAngkatan);
 
         btnRegister = findViewById(R.id.btnRegister);
         btnRegister.setOnClickListener(this);
@@ -55,10 +52,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 username = etUsername.getText().toString();
                 email = etEmail.getText().toString();
                 password = etPassword.getText().toString();
-                nohp = etNohp.getText().toString();
-                jeniskelamin = etNohp.getText().toString();
-                angkatan = etAngkatan.getText().toString();
-                register(username, email, password, nohp, jeniskelamin, angkatan);
+                register(username, email, password);
                 break;
             case R.id.tvLoginHere:
                 Intent intent = new Intent(this, LoginActivity.class);
@@ -67,10 +61,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    private void register(String username, String email, String password, String nohp, String jeniskelamin, String angkatan) {
+    private void register(String username, String email, String password) {
 
         apiInterface = ApiClient.getClient().create(ApiInterface.class);
-        Call<Register> registerCall = apiInterface.registerResponse(username, email, password, nohp, jeniskelamin, angkatan);
+        Call<Register> registerCall = apiInterface.registerResponse(username, email, password);
         registerCall.enqueue(new Callback<Register>() {
             @Override
             public void onResponse(Call<Register> call, Response<Register> response) {

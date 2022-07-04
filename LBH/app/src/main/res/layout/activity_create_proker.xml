@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Proker.CreateProkerActivity">
+
+    <TextView
+        android:id="@+id/tvIdProker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID Proker : "
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvNamaProker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Proker : "
+        android:layout_below="@id/tvIdProker"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvTanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal : "
+        android:layout_below="@id/tvNamaProker"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvDeskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi : "
+        android:layout_below="@id/tvTanggal"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:id="@+id/edtIdProker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="ID Proker"
+        android:layout_toRightOf="@+id/tvIdProker"
+        android:layout_alignBaseline="@+id/tvIdProker"/>
+    <EditText
+        android:id="@+id/edtNamaProker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nama Proker"
+        android:layout_toRightOf="@+id/tvNamaProker"
+        android:layout_alignBaseline="@+id/tvNamaProker"/>
+    <EditText
+        android:id="@+id/edtTanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Tanggal"
+        android:layout_toRightOf="@+id/tvTanggal"
+        android:layout_alignBaseline="@+id/tvTanggal"/>
+    <EditText
+        android:id="@+id/edtDeskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Deskripsi"
+        android:layout_toRightOf="@+id/tvDeskripsi"
+        android:layout_alignBaseline="@+id/tvDeskripsi"/>
+
+    <LinearLayout
+        android:id="@+id/Linearlayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tvIdProker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="10dp">
+        <Button
+            android:id="@+id/btInserting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Proker"/>
+        <Button
+            android:id="@+id/btBackGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"/>
+    </LinearLayout>
+
+</RelativeLayout>

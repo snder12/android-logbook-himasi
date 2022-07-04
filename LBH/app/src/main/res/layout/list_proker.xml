@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/tvIdProker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Id_Proker"
+            android:layout_alignParentRight="true"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tvNamaProker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Nama Proker"
+            android:layout_below="@id/tvIdProker"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/tvTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Tanggal"
+            android:layout_below="@id/tvNamaProker"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/tvDeskripsi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi"
+            android:textSize="15sp"
+            android:layout_below="@id/tvDeskripsi"/>
+    </RelativeLayout>
+    <View
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+</LinearLayout>

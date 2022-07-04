@@ -10,10 +10,11 @@ import android.widget.TextView;
 
 import com.example.lbh.Anggota.AnggotaActivity;
 import com.example.lbh.Login.LoginActivity;
+import com.example.lbh.Proker.ProkerActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnAnggota, btnLogout;
+    Button btnAnggota, btnLogout, btnProker;
     SessionManager sessionManager;
     TextView etUsername, etUserId;
     String username, user_id;
@@ -37,14 +38,19 @@ public class MainActivity extends AppCompatActivity {
         etUserId.setText(user_id);
         etUsername.setText(username);
 
-
-
-
         btnAnggota = (Button) findViewById(R.id.btnAnggota);
         btnAnggota.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, AnggotaActivity.class));
+            }
+        });
+
+        btnProker = (Button) findViewById(R.id.btnProker);
+        btnProker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ProkerActivity.class));
             }
         });
 

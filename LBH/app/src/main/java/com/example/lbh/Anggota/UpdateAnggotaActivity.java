@@ -18,7 +18,7 @@ import com.example.lbh.R;
 
 public class UpdateAnggotaActivity extends AppCompatActivity {
 
-    EditText edtNoAnggota, edtNpm, edtNama, edtNoHp;
+    EditText edtNoAnggota, edtNpm, edtNama, edtNoHp, edtEmail, edtAngkatan, edtJabatan;
     Button btUpdate, btDelete, btBack;
     ApiInterface mApiInterface;
     @Override
@@ -29,6 +29,10 @@ public class UpdateAnggotaActivity extends AppCompatActivity {
         edtNpm = (EditText) findViewById(R.id.edtNpm);
         edtNama = (EditText) findViewById(R.id.edtNama);
         edtNoHp = (EditText) findViewById(R.id.edtNoHp);
+        edtEmail = (EditText) findViewById(R.id.edtEmail);
+        edtAngkatan = (EditText) findViewById(R.id.edtAngkatan);
+        edtJabatan = (EditText) findViewById(R.id.edtJabatan);
+
         Intent mIntent = getIntent();
         edtNoAnggota.setText(mIntent.getStringExtra("No_Anggota"));
         edtNoAnggota.setTag(edtNoAnggota.getKeyListener());
@@ -36,6 +40,10 @@ public class UpdateAnggotaActivity extends AppCompatActivity {
         edtNpm.setText(mIntent.getStringExtra("Npm"));
         edtNama.setText(mIntent.getStringExtra("Nama"));
         edtNoHp.setText(mIntent.getStringExtra("No_hp"));
+        edtEmail.setText((mIntent.getStringExtra("Email")));
+        edtAngkatan.setText(mIntent.getStringExtra("Angkatan"));
+        edtJabatan.setText(mIntent.getStringExtra("Jabatan"));
+
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
         btUpdate = (Button) findViewById(R.id.btUpdate2);
         btDelete = (Button) findViewById(R.id.btDelete2);
@@ -47,7 +55,10 @@ public class UpdateAnggotaActivity extends AppCompatActivity {
                         edtNoAnggota.getText().toString(),
                         edtNpm.getText().toString(),
                         edtNama.getText().toString(),
-                        edtNoHp.getText().toString());
+                        edtNoHp.getText().toString(),
+                        edtEmail.getText().toString(),
+                        edtAngkatan.getText().toString(),
+                        edtJabatan.getText().toString());
                 updateAnggotaCall.enqueue(new Callback<ManageAnggotaModel>() {
                     @Override
                     public void onResponse(Call<ManageAnggotaModel> call, Response<ManageAnggotaModel>

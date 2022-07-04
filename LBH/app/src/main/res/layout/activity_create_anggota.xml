@@ -33,6 +33,28 @@
         android:text="Nomor HP : "
         android:layout_below="@id/tvNama"
         android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email : "
+        android:layout_below="@id/tvNoHp"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvAngkatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Angkatan : "
+        android:layout_below="@id/tvEmail"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvJabatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jabatan: "
+        android:layout_below="@id/tvAngkatan"
+        android:textSize="20sp"/>
+
     <EditText
         android:id="@+id/edtNoAnggota"
         android:layout_width="wrap_content"
@@ -61,6 +83,27 @@
         android:hint="Nomor HP"
         android:layout_toRightOf="@+id/tvNoHp"
         android:layout_alignBaseline="@+id/tvNoHp"/>
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:layout_toRightOf="@+id/tvEmail"
+        android:layout_alignBaseline="@+id/tvEmail"/>
+    <EditText
+        android:id="@+id/edtAngkatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Angkatan"
+        android:layout_toRightOf="@+id/tvAngkatan"
+        android:layout_alignBaseline="@+id/tvAngkatan"/>
+    <EditText
+        android:id="@+id/edtJabatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Jabatan"
+        android:layout_toRightOf="@+id/tvJabatan"
+        android:layout_alignBaseline="@+id/tvJabatan"/>
     <LinearLayout
         android:id="@+id/Linearlayout2"
         android:layout_width="wrap_content"
@@ -68,7 +111,7 @@
         android:orientation="horizontal"
         android:layout_below="@+id/tvNoHp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="200dp"
         android:layout_marginBottom="10dp">
         <Button
             android:id="@+id/btInserting"

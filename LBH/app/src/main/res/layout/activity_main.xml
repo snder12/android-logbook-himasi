@@ -43,11 +43,20 @@
         tools:layout_conversion_absoluteWidth="106dp"
         android:layout_centerInParent="true"/>
     <Button
+        android:id="@+id/btnProker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Proker"
+        android:layout_below="@id/btnAnggota"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="106dp"
+        android:layout_centerInParent="true"/>
+    <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LOGOUT"
-        android:layout_below="@id/btnAnggota"
+        android:layout_below="@id/btnProker"
         android:layout_marginTop="20dp"
         tools:layout_conversion_absoluteHeight="48dp"
         tools:layout_conversion_absoluteWidth="106dp"
