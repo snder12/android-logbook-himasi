@@ -20,7 +20,7 @@ public interface ApiInterface {
     Call<GetAnggotaModel> getAnggota();
     @FormUrlEncoded
     @POST("Anggota")
-    Call<ManageAnggotaModel> postAnggota(@Field("no_anggota") String no_anggota,
+    Call<ManageAnggotaModel> postAnggota(@Field("id_anggota") String id_anggota,
                                          @Field("npm") String npm,
                                          @Field("nama") String nama,
                                          @Field("no_hp") String no_hp,
@@ -29,7 +29,7 @@ public interface ApiInterface {
                                          @Field("jabatan") String jabatan);
     @FormUrlEncoded
     @PUT("Anggota")
-    Call<ManageAnggotaModel> putAnggota(@Field("no_anggota") String no_anggota,
+    Call<ManageAnggotaModel> putAnggota(@Field("id_anggota") String id_anggota,
                                         @Field("npm") String npm,
                                         @Field("nama") String nama,
                                         @Field("no_hp") String no_hp,
@@ -38,7 +38,7 @@ public interface ApiInterface {
                                         @Field("jabatan") String jabatan);
     @FormUrlEncoded
     @HTTP(method = "DELETE", path = "Anggota", hasBody = true)
-    Call<ManageAnggotaModel> deleteAnggota(@Field("no_anggota") String no_anggota);
+    Call<ManageAnggotaModel> deleteAnggota(@Field("id_anggota") String id_anggota);
 
     @FormUrlEncoded
     @POST("login")

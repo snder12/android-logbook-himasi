@@ -8,10 +8,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp">
         <TextView
-            android:id="@+id/tvNoAnggota"
+            android:id="@+id/tvIdAnggota"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="No_Anggota"
+            android:hint="ID Anggota"
             android:layout_alignParentRight="true"
             android:textSize="15sp"
             android:textStyle="bold"/>
@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Npm"
-            android:layout_below="@id/tvNoAnggota"
+            android:layout_below="@id/tvIdAnggota"
             android:textSize="15sp"/>
         <TextView
             android:id="@+id/tvNama"

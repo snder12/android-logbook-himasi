@@ -57,7 +57,7 @@ public class AnggotaActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<GetAnggotaModel> call, Response<GetAnggotaModel> response) {
                 List<AnggotaModel> AnggotaList = response.body().getListDataAnggota();
-                Log.d("Retrofit Get", "Jumlah data Anggota: " + String.valueOf(AnggotaList.size()));
+//                Log.d("Retrofit Get", "Jumlah data Anggota: " + String.valueOf(AnggotaList.size()));
                 mAdapter = new AnggotaAdapter(AnggotaList);
                 mRecyclerView.setAdapter(mAdapter);
             }

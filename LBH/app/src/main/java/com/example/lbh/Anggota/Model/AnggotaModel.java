@@ -4,8 +4,8 @@ import com.google.gson.annotations.SerializedName;
 
 public class AnggotaModel {
 
-    @SerializedName("no_anggota")
-    private String no_anggota;
+    @SerializedName("id_anggota")
+    private String id_anggota;
     @SerializedName("npm")
     private String npm;
     @SerializedName("nama")
@@ -19,9 +19,9 @@ public class AnggotaModel {
     @SerializedName("jabatan")
     private String jabatan;
     public AnggotaModel(){}
-    public AnggotaModel(String no_anggota, String npm, String nama, String no_hp, String email, String angkatan, String jabatan)
+    public AnggotaModel(String id_anggota, String npm, String nama, String no_hp, String email, String angkatan, String jabatan)
     {
-        this.no_anggota = no_anggota;
+        this.id_anggota = id_anggota;
         this.npm = npm;
         this.nama = nama;
         this.no_hp = no_hp;
@@ -29,11 +29,9 @@ public class AnggotaModel {
         this.angkatan = angkatan;
         this.jabatan = jabatan;
     }
-    public String getNo_anggota() {
-        return no_anggota;
-    }
-    public void setNo_anggota(String no_anggota) {
-        this.no_anggota = no_anggota;
+    public String getId_anggota() { return id_anggota; }
+    public void setId_anggota(String id_anggota) {
+        this.id_anggota = id_anggota;
     }
     public String getNpm() {
         return npm;

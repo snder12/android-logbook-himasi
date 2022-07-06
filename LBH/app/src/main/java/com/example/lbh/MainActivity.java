@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnAnggota, btnLogout, btnProker;
     SessionManager sessionManager;
     TextView etUsername, etUserId;
-    String username, user_id;
+    String username, id_users;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity {
         etUserId = findViewById(R.id.etMainUserId);
         etUsername = findViewById(R.id.etMainUsername);
 
-        user_id = sessionManager.getUserDetail().get(SessionManager.USER_ID);
+        id_users = sessionManager.getUserDetail().get(SessionManager.ID_USERS);
         username = sessionManager.getUserDetail().get(SessionManager.USERNAME);
 
-        etUserId.setText(user_id);
+        etUserId.setText(id_users);
         etUsername.setText(username);
 
         btnAnggota = (Button) findViewById(R.id.btnAnggota);

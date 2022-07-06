@@ -7,17 +7,17 @@
     tools:context=".Anggota.UpdateAnggotaActivity">
 
     <TextView
-        android:id="@+id/tvNoAnggota"
+        android:id="@+id/tvIdAnggota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No Anggota : "
+        android:text="ID Anggota : "
         android:textSize="20sp"/>
     <TextView
         android:id="@+id/tvNpm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NPM : "
-        android:layout_below="@id/tvNoAnggota"
+        android:layout_below="@id/tvIdAnggota"
         android:textSize="20sp"/>
     <TextView
         android:id="@+id/tvNama"
@@ -59,12 +59,12 @@
         android:textSize="20sp"/>
 
     <EditText
-        android:id="@+id/edtNoAnggota"
+        android:id="@+id/edtIdAnggota"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Nomor Anggota"
-        android:layout_toRightOf="@+id/tvNoAnggota"
-        android:layout_alignBaseline="@+id/tvNoAnggota"/>
+        android:hint="ID Anggota"
+        android:layout_toRightOf="@+id/tvIdAnggota"
+        android:layout_alignBaseline="@+id/tvIdAnggota"/>
     <EditText
         android:id="@+id/edtNpm"
         android:layout_width="wrap_content"

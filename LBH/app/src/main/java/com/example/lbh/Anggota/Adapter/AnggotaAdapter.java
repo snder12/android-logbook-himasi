@@ -16,6 +16,7 @@ import com.example.lbh.R;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AnggotaAdapter extends RecyclerView.Adapter<AnggotaAdapter.MyViewHolder> {
@@ -32,8 +33,8 @@ public class AnggotaAdapter extends RecyclerView.Adapter<AnggotaAdapter.MyViewHo
     }
     @Override
     public void onBindViewHolder (MyViewHolder holder, @SuppressLint("RecyclerView") final int position){
-        holder.mTextViewNoAnggota.setText("No Anggota = " +
-                mAnggotaList.get(position).getNo_anggota());
+        holder.mTextViewIdAnggota.setText("ID Anggota = " +
+                mAnggotaList.get(position).getId_anggota());
         holder.mTextViewNpm.setText("NPM = " +
                 mAnggotaList.get(position).getNpm());
         holder.mTextViewNama.setText("Nama = " +
@@ -52,8 +53,8 @@ public class AnggotaAdapter extends RecyclerView.Adapter<AnggotaAdapter.MyViewHo
             public void onClick(View view) {
                 Intent mIntent = new Intent(view.getContext(),
                         UpdateAnggotaActivity.class);
-                mIntent.putExtra("No_Anggota",
-                        mAnggotaList.get(position).getNo_anggota());
+                mIntent.putExtra("Id_anggota",
+                        mAnggotaList.get(position).getId_anggota());
                 mIntent.putExtra("Npm",
                         mAnggotaList.get(position).getNpm());
                 mIntent.putExtra("Nama",
@@ -76,10 +77,10 @@ public class AnggotaAdapter extends RecyclerView.Adapter<AnggotaAdapter.MyViewHo
         return mAnggotaList.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView mTextViewNoAnggota, mTextViewNpm, mTextViewNama, mTextViewNoHp, mTextViewEmail, mTextViewAngkatan, mTextViewJabatan;
+        public TextView mTextViewIdAnggota, mTextViewNpm, mTextViewNama, mTextViewNoHp, mTextViewEmail, mTextViewAngkatan, mTextViewJabatan;
         public MyViewHolder(View itemView) {
             super(itemView);
-            mTextViewNoAnggota = (TextView) itemView.findViewById(R.id.tvNoAnggota);
+            mTextViewIdAnggota = (TextView) itemView.findViewById(R.id.tvIdAnggota);
             mTextViewNpm = (TextView) itemView.findViewById(R.id.tvNpm);
             mTextViewNama = (TextView) itemView.findViewById(R.id.tvNama);
             mTextViewNoHp = (TextView) itemView.findViewById(R.id.tvNoHp);

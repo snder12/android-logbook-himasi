@@ -31,6 +31,7 @@ class Proker extends REST_Controller
         $data = array(
             "id_proker"         => $this->post("id_proker"),
             "nama_proker"       => $this->post("nama_proker"),
+            "ketua_pelaksana"   => $this->post("ketua_pelaksana"),
             "tanggal"           => $this->post("tanggal"),
             "deskripsi"         => $this->post("deskripsi"),
         );
@@ -40,10 +41,11 @@ class Proker extends REST_Controller
             $response["status"] = true;
             $response["message"] = "Proker berhasil ditambahkan";
             $response["data"] = [
-                "id_proker"     => $data["id_proker"],
-                "nama_proker"   => $data["nama_proker"],
-                "tanggal"       => $data["tanggal"],
-                "deskripsi"     => $data["deskripsi"],
+                "id_proker"         => $data["id_proker"],
+                "nama_proker"       => $data["nama_proker"],
+                "ketua_pelaksana"   => $data["ketua_pelaksana"],
+                "tanggal"           => $data["tanggal"],
+                "deskripsi"         => $data["deskripsi"],
             ];       
         } else {
             $response["status"] = false;
@@ -59,6 +61,7 @@ class Proker extends REST_Controller
         $data = array(
             "id_proker"         => $this->put("id_proker"),
             "nama_proker"       => $this->put("nama_proker"),
+            "ketua_pelaksana"   => $this->put("ketua_pelaksana"),
             "tanggal"           => $this->put("tanggal"),
             "deskripsi"         => $this->put("deskripsi"),
         );
@@ -71,6 +74,7 @@ class Proker extends REST_Controller
             $response["data"] = [
                 "id_proker"     => $data["id_proker"],
                 "nama_proker"   => $data["nama_proker"],
+                "ketua_pelaksana" => $data["ketua_pelaksana"],
                 "tanggal"       => $data["tanggal"],
                 "deskripsi"     => $data["deskripsi"],
             ];       

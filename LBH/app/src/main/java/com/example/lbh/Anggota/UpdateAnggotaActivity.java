@@ -18,14 +18,14 @@ import com.example.lbh.R;
 
 public class UpdateAnggotaActivity extends AppCompatActivity {
 
-    EditText edtNoAnggota, edtNpm, edtNama, edtNoHp, edtEmail, edtAngkatan, edtJabatan;
+    EditText edtIdAnggota, edtNpm, edtNama, edtNoHp, edtEmail, edtAngkatan, edtJabatan;
     Button btUpdate, btDelete, btBack;
     ApiInterface mApiInterface;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_anggota);
-        edtNoAnggota = (EditText) findViewById(R.id.edtNoAnggota);
+        edtIdAnggota = (EditText) findViewById(R.id.edtIdAnggota);
         edtNpm = (EditText) findViewById(R.id.edtNpm);
         edtNama = (EditText) findViewById(R.id.edtNama);
         edtNoHp = (EditText) findViewById(R.id.edtNoHp);
@@ -34,10 +34,12 @@ public class UpdateAnggotaActivity extends AppCompatActivity {
         edtJabatan = (EditText) findViewById(R.id.edtJabatan);
 
         Intent mIntent = getIntent();
-        edtNoAnggota.setText(mIntent.getStringExtra("No_Anggota"));
-        edtNoAnggota.setTag(edtNoAnggota.getKeyListener());
-        edtNoAnggota.setKeyListener(null);
+        edtIdAnggota.setText(mIntent.getStringExtra("Id_anggota"));
+        edtIdAnggota.setTag(edtIdAnggota.getKeyListener());
+        edtIdAnggota.setKeyListener(null);
         edtNpm.setText(mIntent.getStringExtra("Npm"));
+        edtNpm.setTag(edtNpm.getKeyListener());
+        edtNpm.setKeyListener(null);
         edtNama.setText(mIntent.getStringExtra("Nama"));
         edtNoHp.setText(mIntent.getStringExtra("No_hp"));
         edtEmail.setText((mIntent.getStringExtra("Email")));
@@ -52,7 +54,7 @@ public class UpdateAnggotaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Call<ManageAnggotaModel> updateAnggotaCall = mApiInterface.putAnggota(
-                        edtNoAnggota.getText().toString(),
+                        edtIdAnggota.getText().toString(),
                         edtNpm.getText().toString(),
                         edtNama.getText().toString(),
                         edtNoHp.getText().toString(),
@@ -77,9 +79,9 @@ public class UpdateAnggotaActivity extends AppCompatActivity {
         btDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (edtNoAnggota.getText().toString().trim().isEmpty()==false){
+                if (edtIdAnggota.getText().toString().trim().isEmpty()==false){
                     Call<ManageAnggotaModel> deleteAnggota =
-                            mApiInterface.deleteAnggota(edtNoAnggota.getText().toString());
+                            mApiInterface.deleteAnggota(edtIdAnggota.getText().toString());
                     deleteAnggota.enqueue(new Callback<ManageAnggotaModel>() {
                         @Override
                         public void onResponse(Call<ManageAnggotaModel> call, Response<ManageAnggotaModel>

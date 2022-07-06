@@ -42,7 +42,7 @@ class Login extends REST_Controller
                 $response["status"] = true;
                 $response["message"] = "Login Berhasil";
                 $response["data"] = [
-                    "user_id" => $users["id"], 
+                    "id_users" => $users["id_users"], 
                     "username" => $users["username"],
                 ];
                 
