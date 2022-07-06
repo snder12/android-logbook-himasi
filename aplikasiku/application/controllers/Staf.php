@@ -19,17 +19,17 @@ class Staf extends REST_Controller
 
         // level 0 = anggota
         // level 1 = staff
-
-        $this->db->select("npm, nama, angkatan, jabatan");
+        $this->db->select("id_anggota, npm, nama, angkatan, jabatan");
         $this->db->where("level", 1);
         $staf = $this->db->get("anggota")->result();
+        $this->response(array("result"=>$staf, 200));
 
-        $response["status"] = true;
-        $response["message"] = "Staf berhasil ditampilkan";
-        $response["data"] = $staf;   
+        // $response["status"] = true;
+        // $response["message"] = "Staf berhasil ditampilkan";
+        // $response["data"] = $staf;   
         
-        $json = json_encode($response, JSON_PRETTY_PRINT);
-        echo $json;
+        // $json = json_encode($response, JSON_PRETTY_PRINT);
+        // echo $json;
 
            
 
