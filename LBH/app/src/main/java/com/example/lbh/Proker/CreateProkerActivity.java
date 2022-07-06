@@ -22,26 +22,27 @@ import com.example.lbh.R;
 
 public class CreateProkerActivity extends AppCompatActivity {
 
-    EditText edtIdProker, edtNamaProker, edtTanggal, edtDeskripsi;
-    Button btInsert, btBack;
+    EditText etIdProker, etNamaProker, etKetuaPelaksana, etTanggal, etDeskripsi;
+    Button btnInsert, btnBack;
     ApiInterface mApiInterface;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_proker);
-        edtIdProker = (EditText) findViewById(R.id.edtIdProker);
-        edtNamaProker = (EditText) findViewById(R.id.edtNamaProker);
-        edtTanggal = (EditText) findViewById(R.id.edtTanggal);
-        edtDeskripsi = (EditText) findViewById(R.id.edtDeskripsi);
+        etIdProker = (EditText) findViewById(R.id.etIdProker);
+        etNamaProker = (EditText) findViewById(R.id.etNamaProker);
+        etKetuaPelaksana = (EditText) findViewById(R.id.etKetuaPelaksana);
+        etTanggal = (EditText) findViewById(R.id.etTanggal);
+        etDeskripsi = (EditText) findViewById(R.id.etDeskripsi);
 
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
-        btInsert = (Button) findViewById(R.id.btInserting);
-        btInsert.setOnClickListener(new View.OnClickListener() {
+        btnInsert = (Button) findViewById(R.id.btnInserting);
+        btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Call<ManageProkerModel> postProkerCall =
-                        mApiInterface.postProker(edtIdProker.getText().toString(), edtNamaProker.getText().toString(),
-                                edtTanggal.getText().toString(), edtDeskripsi.getText().toString());
+                        mApiInterface.postProker(etIdProker.getText().toString(), etNamaProker.getText().toString(),
+                                etKetuaPelaksana.getText().toString(), etTanggal.getText().toString(), etDeskripsi.getText().toString());
                 postProkerCall.enqueue(new Callback<ManageProkerModel>() {
                     @Override
                     public void onResponse(Call<ManageProkerModel> call,
@@ -57,8 +58,8 @@ public class CreateProkerActivity extends AppCompatActivity {
                 });
             }
         });
-        btBack = (Button) findViewById(R.id.btBackGo);
-        btBack.setOnClickListener(new View.OnClickListener() {
+        btnBack = (Button) findViewById(R.id.btnBackGo);
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ProkerActivity.pa.refresh();

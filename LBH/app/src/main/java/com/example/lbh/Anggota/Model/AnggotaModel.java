@@ -18,6 +18,7 @@ public class AnggotaModel {
     private String angkatan;
     @SerializedName("jabatan")
     private String jabatan;
+
     public AnggotaModel(){}
     public AnggotaModel(String id_anggota, String npm, String nama, String no_hp, String email, String angkatan, String jabatan)
     {

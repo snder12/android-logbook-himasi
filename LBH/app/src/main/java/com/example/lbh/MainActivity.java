@@ -8,15 +8,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.lbh.About.AboutActivity;
 import com.example.lbh.Anggota.AnggotaActivity;
 import com.example.lbh.Login.LoginActivity;
 import com.example.lbh.Proker.ProkerActivity;
+import com.example.lbh.Staf.StafActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnAnggota, btnLogout, btnProker;
+    Button btnAnggota, btnLogout, btnProker, btnStaf, btnAbout;
     SessionManager sessionManager;
-    TextView etUsername, etUserId;
+    TextView tvUsername, tvIdUser;
     String username, id_users;
 
     @Override
@@ -29,14 +31,14 @@ public class MainActivity extends AppCompatActivity {
             moveToLogin();
         }
 
-        etUserId = findViewById(R.id.etMainUserId);
-        etUsername = findViewById(R.id.etMainUsername);
+        tvIdUser = findViewById(R.id.tvMainUserId);
+        tvUsername = findViewById(R.id.tvMainUsername);
 
         id_users = sessionManager.getUserDetail().get(SessionManager.ID_USERS);
         username = sessionManager.getUserDetail().get(SessionManager.USERNAME);
 
-        etUserId.setText(id_users);
-        etUsername.setText(username);
+        tvIdUser.setText(id_users);
+        tvUsername.setText(username);
 
         btnAnggota = (Button) findViewById(R.id.btnAnggota);
         btnAnggota.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +53,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ProkerActivity.class));
+            }
+        });
+
+        btnStaf = (Button)findViewById(R.id.btnStaf);
+        btnStaf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, StafActivity.class));
+            }
+        });
+
+        btnAbout = (Button)findViewById(R.id.btnAbout);
+        btnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AboutActivity.class));
             }
         });
 

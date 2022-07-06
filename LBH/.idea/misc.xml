@@ -3,13 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/activity_about.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/activity_anggota.xml" value="0.17325227963525835" />
         <entry key="app/src/main/res/layout/activity_create_anggota.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_create_proker.xml" value="0.18177083333333333" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.15833333333333333" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_proker.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_staf.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_update_anggota.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/activity_update_proker.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/list_anggota.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/list_proker.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/list_proker.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/list_staf.xml" value="0.35520833333333335" />
       </map>
     </option>
   </component>

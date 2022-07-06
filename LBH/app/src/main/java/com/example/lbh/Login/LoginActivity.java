@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnLogin = findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(this);
 
-        tvRegister = findViewById(R.id.tvCreateAccount);
+        tvRegister = findViewById(R.id.tvRegister);
         tvRegister.setOnClickListener(this);
     }
 
@@ -55,8 +55,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 password = etPassword.getText().toString();
                 login(username, password);
                 break;
-            case R.id.tvCreateAccount:
-                Intent intent = new Intent(this, RegisterActivity.class);
+            case R.id.tvRegister:
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
                 break;
         }

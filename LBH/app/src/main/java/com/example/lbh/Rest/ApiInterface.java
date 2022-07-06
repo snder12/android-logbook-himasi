@@ -6,6 +6,7 @@ import com.example.lbh.Login.Model.Login;
 import com.example.lbh.Register.Model.Register;
 import com.example.lbh.Proker.Model.GetProkerModel;
 import com.example.lbh.Proker.Model.ManageProkerModel;
+import com.example.lbh.Staf.Model.GetStafModel;
 
 import kotlin.jvm.JvmMultifileClass;
 import retrofit2.Call;
@@ -60,17 +61,22 @@ public interface ApiInterface {
     @FormUrlEncoded
     @POST("proker")
     Call<ManageProkerModel> postProker(@Field("id_proker") String id_proker,
-                                         @Field("nama_proker") String nama_proker,
-                                         @Field("tanggal") String tanggal,
-                                         @Field("deskripsi") String deskripsi);
+                                       @Field("nama_proker") String nama_proker,
+                                       @Field("ketua_pelaksana") String ketua_pelaksana,
+                                       @Field("tanggal") String tanggal,
+                                       @Field("deskripsi") String deskripsi);
     @FormUrlEncoded
     @PUT("proker")
     Call<ManageProkerModel> putProker(@Field("id_proker") String id_proker,
                                       @Field("nama_proker") String nama_proker,
+                                      @Field("ketua_pelaksana") String ketua_pelaksana,
                                       @Field("tanggal") String tanggal,
                                       @Field("deskripsi") String deskripsi);
     @FormUrlEncoded
     @HTTP(method = "DELETE", path = "Proker", hasBody = true)
     Call<ManageProkerModel> deleteProker(@Field("id_proker") String id_proker);
+
+    @GET("Staf")
+    Call<GetStafModel> getStaf();
 }
 

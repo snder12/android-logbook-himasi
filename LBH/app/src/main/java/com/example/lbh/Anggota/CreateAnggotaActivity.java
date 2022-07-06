@@ -18,28 +18,28 @@ import com.example.lbh.R;
 
 public class CreateAnggotaActivity extends AppCompatActivity {
 
-    EditText edtNoAnggota, edtNpm, edtNama, edtNoHp, edtEmail, edtAngkatan, edtJabatan;
-    Button btInsert, btBack;
+    EditText etNoAnggota, etNpm, etNama, etNoHp, etEmail, etAngkatan, etJabatan;
+    Button btnInsert, btnBack;
     ApiInterface mApiInterface;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_anggota);
-        edtNoAnggota = (EditText) findViewById(R.id.edtNoAnggota);
-        edtNpm = (EditText) findViewById(R.id.edtNpm);
-        edtNama = (EditText) findViewById(R.id.edtNama);
-        edtNoHp = (EditText) findViewById(R.id.edtNoHp);
-        edtEmail = (EditText) findViewById(R.id.edtEmail);
-        edtAngkatan = (EditText) findViewById(R.id.edtAngkatan);
-        edtJabatan = (EditText) findViewById(R.id.edtJabatan);
+        etNoAnggota = (EditText) findViewById(R.id.etNoAnggota);
+        etNpm = (EditText) findViewById(R.id.etNpm);
+        etNama = (EditText) findViewById(R.id.etNama);
+        etNoHp = (EditText) findViewById(R.id.etNoHp);
+        etEmail = (EditText) findViewById(R.id.etEmail);
+        etAngkatan = (EditText) findViewById(R.id.etAngkatan);
+        etJabatan = (EditText) findViewById(R.id.etJabatan);
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
-        btInsert = (Button) findViewById(R.id.btInserting);
-        btInsert.setOnClickListener(new View.OnClickListener() {
+        btnInsert = (Button) findViewById(R.id.btnInserting);
+        btnInsert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Call<ManageAnggotaModel> postAnggotaCall =
-                        mApiInterface.postAnggota(edtNoAnggota.getText().toString(), edtNpm.getText().toString(),
-                                edtNama.getText().toString(), edtNoHp.getText().toString(), edtEmail.getText().toString(), edtAngkatan.getText().toString(), edtJabatan.getText().toString());
+                        mApiInterface.postAnggota(etNoAnggota.getText().toString(), etNpm.getText().toString(),
+                                etNama.getText().toString(), etNoHp.getText().toString(), etEmail.getText().toString(), etAngkatan.getText().toString(), etJabatan.getText().toString());
                 postAnggotaCall.enqueue(new Callback<ManageAnggotaModel>() {
                     @Override
                     public void onResponse(Call<ManageAnggotaModel> call,
@@ -55,8 +55,8 @@ public class CreateAnggotaActivity extends AppCompatActivity {
                 });
             }
         });
-        btBack = (Button) findViewById(R.id.btBackGo);
-        btBack.setOnClickListener(new View.OnClickListener() {
+        btnBack = (Button) findViewById(R.id.btnBackGo);
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AnggotaActivity.aa.refresh();

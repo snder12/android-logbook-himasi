@@ -30,44 +30,44 @@
 
                 <!-- Title, secondary and supporting text -->
                 <TextView
-                    android:id="@+id/tvIdProker"
+                    android:id="@+id/tvIdAnggota"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Id_Proker"
+                    android:hint="ID Anggota"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     />
                 <TextView
-                    android:id="@+id/tvNamaProker"
+                    android:id="@+id/tvNpm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Nama Proker"
+                    android:hint="NPM"
                     android:layout_marginTop="8dp"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?android:attr/textColorSecondary"
                     />
                 <TextView
-                    android:id="@+id/tvKetuaPelaksana"
+                    android:id="@+id/tvNama"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Ketua Pelaksana"
+                    android:hint="Nama"
                     android:layout_marginTop="8dp"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?android:attr/textColorSecondary"
                     />
                 <TextView
-                    android:id="@+id/tvTanggal"
+                    android:id="@+id/tvAngkatan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Tanggal"
+                    android:hint="Angkatan"
                     android:layout_marginTop="8dp"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?android:attr/textColorSecondary"
                     />
                 <TextView
-                    android:id="@+id/tvDeskripsi"
+                    android:id="@+id/tvJabatan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Deskripsi"
+                    android:hint="Jabatan"
                     android:layout_marginTop="8dp"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?android:attr/textColorSecondary"

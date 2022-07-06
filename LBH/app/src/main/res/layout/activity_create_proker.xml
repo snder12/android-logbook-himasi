@@ -20,11 +20,18 @@
         android:layout_below="@id/tvIdProker"
         android:textSize="20sp"/>
     <TextView
+        android:id="@+id/tvKetuaPelaksana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ketua Pelaksana : "
+        android:layout_below="@id/tvNamaProker"
+        android:textSize="20sp"/>
+    <TextView
         android:id="@+id/tvTanggal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tanggal : "
-        android:layout_below="@id/tvNamaProker"
+        android:layout_below="@id/tvKetuaPelaksana"
         android:textSize="20sp"/>
     <TextView
         android:id="@+id/tvDeskripsi"
@@ -35,28 +42,35 @@
         android:textSize="20sp"/>
 
     <EditText
-        android:id="@+id/edtIdProker"
+        android:id="@+id/etIdProker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="ID Proker"
         android:layout_toRightOf="@+id/tvIdProker"
         android:layout_alignBaseline="@+id/tvIdProker"/>
     <EditText
-        android:id="@+id/edtNamaProker"
+        android:id="@+id/etNamaProker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Nama Proker"
         android:layout_toRightOf="@+id/tvNamaProker"
         android:layout_alignBaseline="@+id/tvNamaProker"/>
     <EditText
-        android:id="@+id/edtTanggal"
+        android:id="@+id/etKetuaPelaksana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Ketua Pelaksana"
+        android:layout_toRightOf="@+id/tvKetuaPelaksana"
+        android:layout_alignBaseline="@+id/tvKetuaPelaksana"/>
+    <EditText
+        android:id="@+id/etTanggal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Tanggal"
         android:layout_toRightOf="@+id/tvTanggal"
         android:layout_alignBaseline="@+id/tvTanggal"/>
     <EditText
-        android:id="@+id/edtDeskripsi"
+        android:id="@+id/etDeskripsi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Deskripsi"
@@ -73,12 +87,12 @@
         android:layout_marginTop="200dp"
         android:layout_marginBottom="10dp">
         <Button
-            android:id="@+id/btInserting"
+            android:id="@+id/btnInserting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tambah Proker"/>
         <Button
-            android:id="@+id/btBackGo"
+            android:id="@+id/btnBackGo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Back"/>

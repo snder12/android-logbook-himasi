@@ -18,7 +18,7 @@
         android:layout_marginVertical="50dp"/>
 
     <TextView
-        android:id="@+id/etMainUserId"
+        android:id="@+id/tvMainUserId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvDashboard"
@@ -26,10 +26,10 @@
         android:text="userid" />
 
     <TextView
-        android:id="@+id/etMainUsername"
+        android:id="@+id/tvMainUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etMainUserId"
+        android:layout_below="@+id/tvMainUserId"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="username" />
@@ -52,11 +52,29 @@
         tools:layout_conversion_absoluteWidth="106dp"
         android:layout_centerInParent="true"/>
     <Button
+        android:id="@+id/btnStaf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Staf"
+        android:layout_below="@id/btnProker"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="106dp"
+        android:layout_centerInParent="true"/>
+    <Button
+        android:id="@+id/btnAbout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:layout_below="@id/btnStaf"
+        tools:layout_conversion_absoluteHeight="48dp"
+        tools:layout_conversion_absoluteWidth="106dp"
+        android:layout_centerInParent="true"/>
+    <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="LOGOUT"
-        android:layout_below="@id/btnProker"
+        android:layout_below="@id/btnAbout"
         android:layout_marginTop="20dp"
         tools:layout_conversion_absoluteHeight="48dp"
         tools:layout_conversion_absoluteWidth="106dp"

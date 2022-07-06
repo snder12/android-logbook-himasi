@@ -36,6 +36,8 @@ public class ProkerAdapter extends RecyclerView.Adapter<com.example.lbh.Proker.A
                 mProkerList.get(position).getId_proker());
         holder.mTextViewNamaProker.setText("Nama Proker = " +
                 mProkerList.get(position).getNama_proker());
+        holder.mTextViewKetuaPelaksana.setText("Ketua Pelaksana = " +
+                mProkerList.get(position).getKetua_pelaksana());
         holder.mTextViewTanggal.setText("Tanggal = " +
                 mProkerList.get(position).getTanggal());
         holder.mTextViewDeskripsi.setText("Deskripsi = " +
@@ -50,6 +52,8 @@ public class ProkerAdapter extends RecyclerView.Adapter<com.example.lbh.Proker.A
                         mProkerList.get(position).getId_proker());
                 mIntent.putExtra("Nama_Proker",
                         mProkerList.get(position).getNama_proker());
+                mIntent.putExtra("Ketua_Pelaksana",
+                        mProkerList.get(position).getKetua_pelaksana());
                 mIntent.putExtra("Tanggal",
                         mProkerList.get(position).getTanggal());
                 mIntent.putExtra("Deskripsi",
@@ -64,11 +68,12 @@ public class ProkerAdapter extends RecyclerView.Adapter<com.example.lbh.Proker.A
         return mProkerList.size();
     }
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView mTextViewIdProker, mTextViewNamaProker, mTextViewTanggal, mTextViewDeskripsi;
+        public TextView mTextViewIdProker, mTextViewNamaProker, mTextViewKetuaPelaksana, mTextViewTanggal, mTextViewDeskripsi;
         public MyViewHolder(View itemView) {
             super(itemView);
             mTextViewIdProker = (TextView) itemView.findViewById(R.id.tvIdProker);
             mTextViewNamaProker = (TextView) itemView.findViewById(R.id.tvNamaProker);
+            mTextViewKetuaPelaksana = (TextView) itemView.findViewById(R.id.tvKetuaPelaksana);
             mTextViewTanggal = (TextView) itemView.findViewById(R.id.tvTanggal);
             mTextViewDeskripsi = (TextView) itemView.findViewById(R.id.tvDeskripsi);
         }

@@ -8,15 +8,18 @@ public class ProkerModel {
     private String id_proker;
     @SerializedName("nama_proker")
     private String nama_proker;
+    @SerializedName("ketua_pelaksana")
+    private String ketua_pelaksana;
     @SerializedName("tanggal")
     private String tanggal;
     @SerializedName("deskripsi")
     private String deskripsi;
     public ProkerModel(){}
-    public ProkerModel(String id_proker, String nama_proker, String tanggal, String deskripsi)
+    public ProkerModel(String id_proker, String nama_proker, String ketua_pelaksana, String tanggal, String deskripsi)
     {
         this.id_proker = id_proker;
         this.nama_proker = nama_proker;
+        this.ketua_pelaksana = ketua_pelaksana;
         this.tanggal = tanggal;
         this.deskripsi = deskripsi;
     }
@@ -30,6 +33,8 @@ public class ProkerModel {
     public void setNama_proker(String nama_proker) {
         this.nama_proker = nama_proker;
     }
+    public String getKetua_pelaksana() { return ketua_pelaksana; }
+    public void setKetua_pelaksana(String ketua_pelaksana) { this.ketua_pelaksana = ketua_pelaksana; }
     public String getTanggal() {
         return tanggal;
     }

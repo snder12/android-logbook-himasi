@@ -1,4 +1,4 @@
-package com.example.lbh.Proker;
+package com.example.lbh.Staf;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,10 +9,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.lbh.Proker.Adapter.ProkerAdapter;
-import com.example.lbh.Proker.CreateProkerActivity;
-import com.example.lbh.Proker.Model.ProkerModel;
-import com.example.lbh.Proker.Model.GetProkerModel;
+import com.example.lbh.Staf.Adapter.StafAdapter;
+import com.example.lbh.Staf.StafActivity;
+import com.example.lbh.Staf.Model.StafModel;
+import com.example.lbh.Staf.Model.GetStafModel;
+import com.example.lbh.Staf.Adapter.StafAdapter;
+import com.example.lbh.Staf.Model.StafModel;
+import com.example.lbh.Staf.Model.GetStafModel;
 import com.example.lbh.Rest.ApiClient;
 import com.example.lbh.Rest.ApiInterface;
 
@@ -24,46 +27,41 @@ import retrofit2.Response;
 
 import com.example.lbh.R;
 
-public class ProkerActivity extends AppCompatActivity {
+public class StafActivity extends AppCompatActivity {
 
-    Button btnIns;
     ApiInterface mApiInterface;
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    public static ProkerActivity pa;
+    public static StafActivity sa;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_proker);
-        btnIns = (Button) findViewById(R.id.btnIns);
-        btnIns.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(com.example.lbh.Proker.ProkerActivity.this,
-                        CreateProkerActivity.class));
-            }
-        });
+        setContentView(R.layout.activity_staf);
+
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView.setHasFixedSize(true);
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
-        pa=this;
+        sa=this;
         refresh();
     }
+
     public void refresh() {
-        Call<GetProkerModel> prokerCall = mApiInterface.getProker();
-        prokerCall.enqueue(new Callback<GetProkerModel>() {
+//        Call<GetStafModel> stafCall = mApiInterface.getStaf();
+        Call<GetStafModel> stafCall = mApiInterface.getStaf();
+        stafCall.enqueue(new Callback<GetStafModel>() {
             @Override
-            public void onResponse(Call<GetProkerModel> call, Response<GetProkerModel> response) {
-                List<ProkerModel> ProkerList = response.body().getListDataProker();
-                Log.d("Retrofit Get", "Jumlah data Proker: " + String.valueOf(ProkerList.size()));
-                mAdapter = new ProkerAdapter(ProkerList);
+            public void onResponse(Call<GetStafModel> call, Response<GetStafModel> response) {
+                List<StafModel> StafList = response.body().getListDataStaf();
+//                Log.d("Retrofit Get", "Jumlah data Anggota: " + String.valueOf(AnggotaList.size()));
+                mAdapter = new StafAdapter(StafList);
                 mRecyclerView.setAdapter(mAdapter);
             }
             @Override
-            public void onFailure(Call<GetProkerModel> call, Throwable t) {
+            public void onFailure(Call<GetStafModel> call, Throwable t) {
                 Log.e("Retrofit Get", t.toString());
             }
         });

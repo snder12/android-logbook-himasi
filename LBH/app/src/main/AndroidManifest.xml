@@ -18,6 +18,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".About.AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Staf.StafActivity"
+            android:exported="false" />
+        <activity
             android:name=".Proker.CreateProkerActivity"
             android:exported="false" />
         <activity
