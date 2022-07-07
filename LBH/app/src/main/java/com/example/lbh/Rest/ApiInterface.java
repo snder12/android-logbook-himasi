@@ -27,7 +27,8 @@ public interface ApiInterface {
                                          @Field("no_hp") String no_hp,
                                          @Field("email") String email,
                                          @Field("angkatan") String angkatan,
-                                         @Field("jabatan") String jabatan);
+                                         @Field("jabatan") String jabatan,
+                                         @Field("level") String level);
     @FormUrlEncoded
     @PUT("Anggota")
     Call<ManageAnggotaModel> putAnggota(@Field("id_anggota") String id_anggota,

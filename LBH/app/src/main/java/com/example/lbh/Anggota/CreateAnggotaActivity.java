@@ -18,7 +18,7 @@ import com.example.lbh.R;
 
 public class CreateAnggotaActivity extends AppCompatActivity {
 
-    EditText etNoAnggota, etNpm, etNama, etNoHp, etEmail, etAngkatan, etJabatan;
+    EditText etNoAnggota, etNpm, etNama, etNoHp, etEmail, etAngkatan, etJabatan, etLevel;
     Button btnInsert, btnBack;
     ApiInterface mApiInterface;
     @Override
@@ -32,6 +32,7 @@ public class CreateAnggotaActivity extends AppCompatActivity {
         etEmail = (EditText) findViewById(R.id.etEmail);
         etAngkatan = (EditText) findViewById(R.id.etAngkatan);
         etJabatan = (EditText) findViewById(R.id.etJabatan);
+        etLevel = (EditText) findViewById(R.id.etLevel);
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
         btnInsert = (Button) findViewById(R.id.btnInserting);
         btnInsert.setOnClickListener(new View.OnClickListener() {
@@ -39,7 +40,8 @@ public class CreateAnggotaActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Call<ManageAnggotaModel> postAnggotaCall =
                         mApiInterface.postAnggota(etNoAnggota.getText().toString(), etNpm.getText().toString(),
-                                etNama.getText().toString(), etNoHp.getText().toString(), etEmail.getText().toString(), etAngkatan.getText().toString(), etJabatan.getText().toString());
+                                etNama.getText().toString(), etNoHp.getText().toString(), etEmail.getText().toString(),
+                                etAngkatan.getText().toString(), etJabatan.getText().toString(), etLevel.getText().toString());
                 postAnggotaCall.enqueue(new Callback<ManageAnggotaModel>() {
                     @Override
                     public void onResponse(Call<ManageAnggotaModel> call,

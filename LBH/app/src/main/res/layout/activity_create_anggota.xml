@@ -51,8 +51,15 @@
         android:id="@+id/tvJabatan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jabatan: "
+        android:text="Jabatan : "
         android:layout_below="@id/tvAngkatan"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/tvLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level : "
+        android:layout_below="@id/tvJabatan"
         android:textSize="20sp"/>
 
     <EditText
@@ -104,6 +111,13 @@
         android:hint="Jabatan"
         android:layout_toRightOf="@+id/tvJabatan"
         android:layout_alignBaseline="@+id/tvJabatan"/>
+    <EditText
+        android:id="@+id/etLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Level"
+        android:layout_toRightOf="@+id/tvLevel"
+        android:layout_alignBaseline="@+id/tvLevel"/>
     <LinearLayout
         android:id="@+id/Linearlayout2"
         android:layout_width="wrap_content"

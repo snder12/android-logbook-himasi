@@ -41,7 +41,8 @@ class Anggota extends REST_Controller
             "no_hp"         => $this->post("no_hp"),
             "email"         => $this->post("email"),
             "angkatan"      => $this->post("angkatan"),
-            "jabatan"       => $this->post("jabatan")
+            "jabatan"       => $this->post("jabatan"),
+            "level"         => $this->post("level")
         );
 
         $insert = $this->db->insert("anggota", $data);
@@ -49,13 +50,14 @@ class Anggota extends REST_Controller
             $response["status"] = true;
             $response["message"] = "Registrasi berhasil";
             $response["data"] = [
-                "id_anggota" => $data["id_anggota"],
-                "npm" => $data["npm"],
-                "nama" => $data["nama"],
-                "no_hp" => $data["no_hp"],
-                "email" => $data["email"],
-                "angkatan" => $data["angkatan"],
-                "jabatan" => $data["jabatan"],
+                "id_anggota"    => $data["id_anggota"],
+                "npm"           => $data["npm"],
+                "nama"          => $data["nama"],
+                "no_hp"         => $data["no_hp"],
+                "email"         => $data["email"],
+                "angkatan"      => $data["angkatan"],
+                "jabatan"       => $data["jabatan"],
+                "level"         => $data["level"]
             ];   
         } else {
             $response["status"] = false;

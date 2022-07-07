@@ -18,9 +18,11 @@ public class AnggotaModel {
     private String angkatan;
     @SerializedName("jabatan")
     private String jabatan;
+    @SerializedName("level")
+    private String level;
 
     public AnggotaModel(){}
-    public AnggotaModel(String id_anggota, String npm, String nama, String no_hp, String email, String angkatan, String jabatan)
+    public AnggotaModel(String id_anggota, String npm, String nama, String no_hp, String email, String angkatan, String jabatan, String level)
     {
         this.id_anggota = id_anggota;
         this.npm = npm;
@@ -29,6 +31,7 @@ public class AnggotaModel {
         this.email = email;
         this.angkatan = angkatan;
         this.jabatan = jabatan;
+        this.level = level;
     }
     public String getId_anggota() { return id_anggota; }
     public void setId_anggota(String id_anggota) {
@@ -70,5 +73,9 @@ public class AnggotaModel {
     public void setJabatan(String jabatan) {
         this.jabatan= jabatan;
     }
+    public String getLevel() {
+        return level;
+    }
+    public void setLevel(String level) { this.level = level; }
 
 }
